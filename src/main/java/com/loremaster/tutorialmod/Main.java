@@ -5,6 +5,7 @@ import com.loremaster.tutorialmod.proxy.CommonProxy;
 import com.loremaster.tutorialmod.util.Reference;
 import com.loremaster.tutorialmod.world.ModWorldGen;
 
+import net.minecraft.init.MobEffects;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -38,7 +39,7 @@ public class Main {
 	@EventHandler
 	public static void Postinit(FMLPostInitializationEvent event)
 	{
-		
+
 	}
 
 }

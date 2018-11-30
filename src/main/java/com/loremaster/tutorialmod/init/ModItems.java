@@ -5,6 +5,8 @@ import java.util.List;
 
 import com.loremaster.tutorialmod.items.ItemBase;
 import com.loremaster.tutorialmod.items.armor.ArmorBase;
+import com.loremaster.tutorialmod.items.food.FoodBase;
+import com.loremaster.tutorialmod.items.food.FoodEffectBase;
 import com.loremaster.tutorialmod.items.tools.ToolAxe;
 import com.loremaster.tutorialmod.items.tools.ToolHoe;
 import com.loremaster.tutorialmod.items.tools.ToolPickaxe;
@@ -12,6 +14,7 @@ import com.loremaster.tutorialmod.items.tools.ToolSpade;
 import com.loremaster.tutorialmod.items.tools.ToolSword;
 import com.loremaster.tutorialmod.util.Reference;
 
+import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
@@ -22,6 +25,7 @@ import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemSword;
+import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class ModItems 
@@ -50,4 +54,7 @@ public class ModItems
 	public static final Item RUBY_LEGGINGS = new ArmorBase("ruby_leggings", ARMOR_MATERIAL_RUBY, 2, EntityEquipmentSlot.LEGS);
 	public static final Item RUBY_BOOTS = new ArmorBase("ruby_boots", ARMOR_MATERIAL_RUBY, 1, EntityEquipmentSlot.FEET);
 	
+	//Food
+	//public static final Item EVIL_APPLE = new FoodBase("evil_apple", 4, 2.4f, false);
+	public static final Item EVIL_APPLE = new FoodEffectBase("evil_apple", 4, 2.4f, false, new PotionEffect(MobEffects.POISON, (60*20), 1, false, true));
 }
