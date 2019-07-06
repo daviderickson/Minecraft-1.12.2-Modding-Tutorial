@@ -7,11 +7,7 @@ import com.loremaster.tutorialmod.items.ItemBase;
 import com.loremaster.tutorialmod.items.armor.ArmorBase;
 import com.loremaster.tutorialmod.items.food.FoodBase;
 import com.loremaster.tutorialmod.items.food.FoodEffectBase;
-import com.loremaster.tutorialmod.items.tools.ToolAxe;
-import com.loremaster.tutorialmod.items.tools.ToolHoe;
-import com.loremaster.tutorialmod.items.tools.ToolPickaxe;
-import com.loremaster.tutorialmod.items.tools.ToolSpade;
-import com.loremaster.tutorialmod.items.tools.ToolSword;
+import com.loremaster.tutorialmod.items.tools.*;
 import com.loremaster.tutorialmod.util.Reference;
 
 import net.minecraft.init.MobEffects;
@@ -36,6 +32,7 @@ public class ModItems
 	public static final ToolMaterial MATERIAL_RUBY = EnumHelper.addToolMaterial("material_ruby", 3, 250, 8.0F, 3.0F, 10);
 	public static final ArmorMaterial ARMOR_MATERIAL_RUBY = EnumHelper.addArmorMaterial("armor_material_ruby", Reference.MOD_ID + ":ruby", 14, 
 			new int[] {2, 5, 7, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0F);
+	public static final ToolMaterial MATERIAL_NETHER_STAR = EnumHelper.addToolMaterial("material_nether_star", 3, 250, 8.0F, Float.MAX_VALUE, 10);
 
 	//Items
 	public static final Item RUBY = new ItemBase("ruby");
@@ -47,7 +44,7 @@ public class ModItems
 	public static final ItemPickaxe RUBY_PICKAXE = new ToolPickaxe("ruby_pickaxe", MATERIAL_RUBY);
 	public static final ItemAxe RUBY_AXE = new ToolAxe("ruby_axe", MATERIAL_RUBY);
 	public static final ItemHoe RUBY_HOE = new ToolHoe("ruby_hoe", MATERIAL_RUBY);
-	
+
 	//Armor
 	public static final Item RUBY_HELMET = new ArmorBase("ruby_helmet", ARMOR_MATERIAL_RUBY, 1, EntityEquipmentSlot.HEAD);
 	public static final Item RUBY_CHESTPLATE = new ArmorBase("ruby_chestplate", ARMOR_MATERIAL_RUBY, 1, EntityEquipmentSlot.CHEST);
@@ -57,4 +54,8 @@ public class ModItems
 	//Food
 	//public static final Item EVIL_APPLE = new FoodBase("evil_apple", 4, 2.4f, false);
 	public static final Item EVIL_APPLE = new FoodEffectBase("evil_apple", 4, 2.4f, false, new PotionEffect(MobEffects.POISON, (60*20), 1, false, true));
+
+	// Aspen's items
+	public static final ItemSword NETHER_STAR_SWORD = new NetherStarSword("nether_star_sword",MATERIAL_NETHER_STAR);
+
 }
