@@ -32,7 +32,7 @@ public class ModItems
 	public static final ToolMaterial MATERIAL_RUBY = EnumHelper.addToolMaterial("material_ruby", 3, 250, 8.0F, 3.0F, 10);
 	public static final ArmorMaterial ARMOR_MATERIAL_RUBY = EnumHelper.addArmorMaterial("armor_material_ruby", Reference.MOD_ID + ":ruby", 14, 
 			new int[] {2, 5, 7, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0F);
-	public static final ToolMaterial MATERIAL_NETHER_STAR = EnumHelper.addToolMaterial("material_nether_star", 3, 250, 8.0F, Float.MAX_VALUE, 10);
+	public static final ToolMaterial MATERIAL_NETHER_STAR = EnumHelper.addToolMaterial("material_nether_star", 3, 5000, 8.0F, 300, 10);
 
 	//Items
 	public static final Item RUBY = new ItemBase("ruby");
@@ -57,5 +57,5 @@ public class ModItems
 
 	// Aspen's items
 	public static final ItemSword NETHER_STAR_SWORD = new NetherStarSword("nether_star_sword",MATERIAL_NETHER_STAR);
-
+	public static final ItemPickaxe NETHER_STAR_PICKAXE = new NetherStarPickaxe("nether_star_pickaxe", MATERIAL_NETHER_STAR);
 }
